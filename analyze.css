@@ -49,3 +49,31 @@
   box-shadow: inset 6px 6px 12px #bebebe, inset -6px -6px 12px #ffffff;
   color: #333;
 }
+
+/* Spinner */
+.spinner {
+  border: 4px solid #e0e0e0;
+  border-top: 4px solid #9c66d7;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Highlight textarea */
+.highlight-flash {
+  animation: flash 0.8s ease-in-out;
+}
+
+@keyframes flash {
+  0% { background-color: #fff7cc; }
+  100% { background-color: transparent; }
+}
