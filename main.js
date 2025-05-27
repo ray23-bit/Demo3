@@ -233,7 +233,7 @@ const stylePresets = {
 
 // Preset untuk model AI
 const modelBoosts = {
-    turbo: "optimized for fast rendering, simplified details, low latency, vivid textures",
+    turbo: "optimized for fast rendering, simplified details, low latency, hyper detailed, 16k resolution, cinematic lighting, fine textures, ray tracing ,vivid textures",
     premium: "hyper detailed, 16k resolution, cinematic lighting, fine textures, ray tracing"
 };
 
