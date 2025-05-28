@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#9c66d7">
+  <meta name="description" content="Rizqi O AI - Image, Chat & Audio Generator">
+  <title>Rizqi O AI - Multi Generator</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="enhance-prompt.css">
+  <link rel="stylesheet" href="analyze.css">
+  <link rel="stylesheet" href="chatbot.css">
+  <link rel="stylesheet" href="audio.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFEV3HSD63"></script>
+  <script src="analytics.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Theme Switch -->
+    <div class="theme-switch-wrapper">
+      <i class="fas fa-sun theme-icon"></i>
+      <label class="theme-switch">
+        <input id="theme-checkbox" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <i class="fas fa-moon theme-icon" style="display: none;"></i>
+    </div>
+
+    <header>
+      <div class="logo-container">
+        <img alt="Rizqi O Logo" src="logo-rizqi-o-1.png" style="height: 80px; display: block;">
+        <div style="font-size: 1.1rem; color: #555; margin-top: 10px;">AI Generator Suite</div>
+      </div>
+      <button class="install-btn" id="installButton" style="display: none;">
+        <i class="fas fa-download"></i> Install App
+      </button>
+    </header>
+
+    <div class="main-content">
+      <!-- Chatbot Panel (Baru) -->
+      <div class="chatbot-panel neumorph">
+        <h2 class="section-title"><i class="fas fa-robot"></i> Chatbot AI</h2>
+        <div class="chat-container" id="chat-container">
+          <div class="message bot-message">Halo! Saya RIZQI O. Ada yang bisa saya bantu?</div>
+        </div>
+        <div class="chat-input">
+          <input type="text" id="user-input" placeholder="Ketik pesan Anda..." class="neumorph-input">
+          <button id="send-button" class="neumorph-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <button id="clear-chat" class="neumorph-btn btn-reset"><i class="fas fa-trash"></i> Bersihkan Chat</button>
+      </div>
+
+      <!-- Audio Generator Panel (Baru) -->
+      <div class="audio-panel neumorph">
+        <h2 class="section-title"><i class="fas fa-microphone"></i> Audio Generator</h2>
+        <div class="audio-player">
+          <div class="audio-info" id="audio-info">Audio akan muncul di sini</div>
+          <audio id="audio-element" style="display: none;"></audio>
+          <div class="audio-controls">
+            <button id="play-button" class="neumorph-btn-audio"><i class="fas fa-play"></i></button>
+            <div class="audio-progress"><div class="audio-progress-bar" id="progress-bar"></div></div>
+            <div class="audio-time" id="audio-time">00:00 / 00:00</div>
+            <button id="download-audio" class="neumorph-btn-download"><i class="fas fa-download"></i></button>
+          </div>
+        </div>
+        <select class="voice-selector neumorph-select" id="voice-selector">
+          <option value="alloy">Alloy</option>
+          <option value="echo">Echo</option>
+          <option value="fable">Fable</option>
+          <option value="onyx">Onyx</option>
+          <option value="nova">Nova</option>
+          <option value="shimmer">Shimmer</option>
+        </select>
+        <div class="audio-input-group">
+          <input type="text" id="audio-prompt" placeholder="Masukkan teks..." class="neumorph-input">
+          <button id="generate-audio-button" class="neumorph-btn"><i class="fas fa-magic"></i> Generate</button>
+        </div>
+      </div>
+
+      <!-- Image Generator Panel (Existing) -->
+      <div class="control-panel neumorph">
+        <h2 class="section-title"><i class="fas fa-sliders-h"></i> Image Settings</h2>
+        <div class="form-group">
+          <label for="prompt">Image Prompt</label>
+          <textarea class="neumorph-input" id="prompt" placeholder="Describe the image..."></textarea>
+          <button id="clearPrompt" class="neumorph-btn"><i class="fas fa-eraser"></i> Clear</button>
+        </div>
+
+        <!-- ... (Seluruh kode image generator existing tetap sama) ... -->
+        
+      </div>
+
+      <div class="preview-panel neumorph">
+        <h2 class="section-title"><i class="fas fa-image"></i> Image Preview</h2>
+        <div class="placeholder" id="placeholder">
+          <i class="fas fa-cloud"></i>
+          <p>Your image will appear here</p>
+        </div>
+        <img alt="Generated image" class="image-preview" id="image-preview" style="display:none;">
+        <button id="download-btn" class="neumorph-btn"><i class="fas fa-download"></i> Download</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script src="enhance.js"></script>
+  <script src="analyze.js"></script>
+  <script src="chatbot.js"></script>
+  <script src="audio.js"></script>
+</body>
+</html>
