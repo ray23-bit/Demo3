@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rizqi O AI - Image, Chatbot & Audio Generator</title>
+  <meta name="theme-color" content="#9c66d7">
+  <meta name="description" content="Rizqi O AI Generator - Generate images, chat, and audio using AI.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="chatbot.css">
+  <link rel="stylesheet" href="audio.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e0e0e0;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    .neumorph {
+      background: #e0e0e0;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 9px 9px 16px #bebebe,
+                  -9px -9px 16px #ffffff;
+    }
+    .section-title {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+    .neumorph-btn {
+      background: #e0e0e0;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 15px;
+      box-shadow: 6px 6px 12px #bebebe,
+                  -6px -6px 12px #ffffff;
+      cursor: pointer;
+    }
+    .neumorph-input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 15px;
+      background: #e0e0e0;
+      box-shadow: inset 5px 5px 10px #bebebe,
+                  inset -5px -5px 10px #ffffff;
+      margin-bottom: 15px;
+    }
+    textarea.neumorph-input {
+      resize: vertical;
+      min-height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- IMAGE GENERATOR -->
+    <div class="neumorph">
+      <h2 class="section-title"><i class="fas fa-image"></i> Image Generator</h2>
+      <textarea id="prompt" class="neumorph-input" placeholder="Describe the image you want to generate..."></textarea>
+      <button id="generate-btn" class="neumorph-btn"><i class="fas fa-magic"></i> Generate Image</button>
+      <div id="image-preview" style="margin-top: 20px;">
+        <p>Generated image will appear here</p>
+      </div>
+    </div>
+
+    <!-- CHATBOT -->
+    <div class="chatbot-panel neumorph">
+      <h2 class="section-title"><i class="fas fa-robot"></i> Chatbot AI</h2>
+      <div class="chat-container" id="chat-container">
+        <div class="message bot-message">Halo! Saya RIZQI O. Ada yang bisa saya bantu hari ini?</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Ketik pesan Anda..." class="neumorph-input">
+        <button id="send-button" class="neumorph-btn"><i class="fas fa-paper-plane"></i></button>
+      </div>
+      <button id="clear-chat" class="neumorph-btn"><i class="fas fa-trash"></i> Bersihkan</button>
+    </div>
+
+    <!-- AUDIO GENERATOR -->
+    <div class="audio-panel neumorph">
+      <h2 class="section-title"><i class="fas fa-microphone"></i> Audio Generator</h2>
+      <div class="audio-player">
+        <div class="audio-info" id="audio-info">Audio akan muncul di sini setelah digenerate</div>
+        <audio id="audio-element" style="display: none;"></audio>
+        <div class="audio-controls">
+          <button id="play-button"><i class="fas fa-play"></i></button>
+          <div class="audio-progress"><div class="audio-progress-bar" id="progress-bar"></div></div>
+          <div class="audio-time" id="audio-time">00:00 / 00:00</div>
+          <button id="download-audio" class="audio-download"><i class="fas fa-download"></i></button>
+        </div>
+      </div>
+      <select class="voice-selector" id="voice-selector">
+        <option value="alloy">Alloy (Default)</option>
+        <option value="echo">Echo</option>
+        <option value="fable">Fable</option>
+        <option value="onyx">Onyx</option>
+        <option value="nova">Nova</option>
+        <option value="shimmer">Shimmer</option>
+      </select>
+      <div class="chat-input">
+        <input type="text" id="audio-prompt" placeholder="Masukkan teks untuk diubah jadi audio..." class="neumorph-input">
+        <button id="generate-audio-button" class="neumorph-btn"><i class="fas fa-magic"></i> Generate Audio</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="chatbot.js"></script>
+  <script src="audio.js"></script>
+</body>
+</html>
