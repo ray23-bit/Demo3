@@ -297,5 +297,13 @@
   <script src="analyze.js"></script>
   <script src="chatbot.js"></script>
   <script src="audio.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const loadingElement = document.querySelector('.loading');
+    if (loadingElement) {
+      loadingElement.style.display = 'none';
+    }
+  });
+</script>
 </body>
 </html>
