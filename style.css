@@ -757,3 +757,11 @@ body {
         inset 3px 3px 6px var(--neumorph-shadow-dark),
         inset -3px -3px 6px var(--neumorph-shadow-light) !important;
 }
+
+/* Nonaktifkan loading spinner */
+.spinner {
+    display: none !important;
+}
+.loading p {
+    display: none !important;
+}
