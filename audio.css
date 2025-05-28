@@ -47,7 +47,7 @@
   left: 0;
   height: 100%;
   width: 0%;
-  background: var(--neumorph-bg);(135deg, var(--primary-color), var(--secondary-color));
+  background: var(--neumorph-bg); (135deg, var(--primary-color), var(--secondary-color));
   transition: width 0.1s linear;
 }
 
