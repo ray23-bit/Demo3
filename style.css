@@ -660,16 +660,8 @@
 
 
 body {
-    background: url('logo-rizqi-o-1.png') center center no-repeat;
-    background-color: #000;
-    background-size: contain;
-    background-attachment: fixed;
-    color: var(--text-color);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background: none;
+    background-color: var(--body-bg);
 }
 
 /* Enhanced Neumorphism Styling */
