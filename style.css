@@ -660,7 +660,7 @@
 
 
 body {
-    background: var(--body-bg); /* atau none jika ingin benar-benar kosong */
+    background: var(--neumorph-bg);
     color: var(--text-color);
     min-height: 100vh;
     display: flex;
