@@ -1,4 +1,14 @@
- .chatbot-panel {
+:root {
+  --panel-bg: #e0e0e0;
+  --shadow-dark: #bebebe;
+  --shadow-light: #ffffff;
+  --text-color: #333;
+  --primary-color: #76b2fe;
+  --secondary-color: #b69efe;
+  --success-color: #4CAF50;
+}
+
+.chatbot-panel {
   margin-top: 30px;
   padding: 20px;
 }
