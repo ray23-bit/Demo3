@@ -738,6 +738,10 @@ footer {
         inset -3px -3px 6px var(--neumorph-shadow-light) !important;
 }
 
+/* Sembunyikan teks spesifik "This may take a moment" */
+.loading p:nth-of-type(2) {
+  display: none !important;
+}
 #loading p:last-child {
   display: none;
 }
