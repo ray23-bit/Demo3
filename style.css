@@ -738,3 +738,7 @@ footer {
         inset 3px 3px 6px var(--neumorph-shadow-dark),
         inset -3px -3px 6px var(--neumorph-shadow-light) !important;
 }
+
+#loading p:last-child {
+  display: none;
+}
