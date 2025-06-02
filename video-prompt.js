@@ -145,7 +145,37 @@
                     </div>
                 </div>
             </div>
-            
+            `
+            <div class="section">
+                <div class="input-group">
+                    <label>Character Selection<br><small>(Pemilihan Karakter)</small></label>
+                    <div class="character-selector">
+                        <button type="button" class="effect-button" id="character-1-btn">
+                            <i class="fas fa-user"></i> Character 1
+                        </button>
+                        <button type="button" class="effect-button" id="character-2-btn">
+                            <i class="fas fa-user"></i> Character 2
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label>Film Styles & Effects<br><small>(Gaya Film & Efek)</small></label>
+                    <div class="effect-buttons">
+                        <button type="button" class="effect-button" id="film-style-btn">
+                            <i class="fas fa-film"></i> Film Style
+                        </button>
+                        <button type="button" class="effect-button" id="split-view-btn">
+                            <i class="fas fa-columns"></i> Split View
+                        </button>
+                        <button type="button" class="effect-button" id="fish-eye-btn">
+                            <i class="fas fa-eye"></i> Fish Eye
+                        </button>
+                    </div>
+                </div>
+            </div>
+`
+           
             <div class="output-group">
                 <label for="video-prompt-output">Generated Prompt<br><small>(Prompt yang Dihasilkan)</small></label>
                 <textarea id="video-prompt-output" rows="5" readonly></textarea>
