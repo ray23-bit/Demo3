@@ -1,0 +1,138 @@
+ /* Video Prompt Generator Styles */
+.video-prompt-generator {
+    background: var(--card-bg);
+    padding: 1.75rem;
+    border-radius: var(--radius);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 8px 8px 15px var(--neumorph-shadow-dark), 
+                -8px -8px 15px var(--neumorph-shadow-light);
+    margin-top: 2rem;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-prompt-generator .section {
+    background: var(--darker);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: inset 3px 3px 5px var(--neumorph-inset-dark), 
+               inset -3px -3px 5px var(--neumorph-inset-light);
+}
+
+.video-prompt-generator .input-group {
+    margin-bottom: 1rem;
+}
+
+.video-prompt-generator label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.video-prompt-generator input[type="text"],
+.video-prompt-generator select,
+.video-prompt-generator textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    background: var(--darker);
+    color: var(--text);
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.video-prompt-generator textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.video-prompt-generator select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+}
+
+.video-prompt-generator .output-group {
+    margin-top: 1.5rem;
+}
+
+.video-prompt-generator .generate-button,
+.video-prompt-generator .copy-button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 0.5rem;
+}
+
+.video-prompt-generator .generate-button {
+    background: var(--gradient);
+    color: white;
+}
+
+.video-prompt-generator .copy-button {
+    background: var(--darker);
+    border: 1px solid var(--glass-border);
+    color: var(--text);
+}
+
+.video-prompt-generator .advanced-section {
+    position: relative;
+}
+
+.video-prompt-generator .advanced-content {
+    display: none;
+    padding-top: 1rem;
+}
+
+.video-prompt-generator .toggle-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.video-prompt-generator .toggle {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background: var(--darker);
+    border-radius: 10px;
+    margin-right: 0.75rem;
+    border: 1px solid var(--glass-border);
+}
+
+.video-prompt-generator .toggle:after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--text);
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s;
+}
+
+.video-prompt-generator .advanced-toggle:checked + .toggle:after {
+    left: 22px;
+    background: var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-prompt-generator {
+        padding: 1.25rem;
+    }
+}
