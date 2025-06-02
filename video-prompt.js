@@ -212,7 +212,20 @@
             });
         }
 
-        
+        // Character and effect buttons
+const character1Btn = document.getElementById('character-1-btn');
+const character2Btn = document.getElementById('character-2-btn');
+const filmStyleBtn = document.getElementById('film-style-btn');
+const splitViewBtn = document.getElementById('split-view-btn');
+const fishEyeBtn = document.getElementById('fish-eye-btn');
+
+[character1Btn, character2Btn, filmStyleBtn, splitViewBtn, fishEyeBtn].forEach(btn => {
+    if (btn) {
+        btn.addEventListener('click', (e) => {
+            e.target.classList.toggle('active');
+        });
+    }
+});
         // Clear button
         const clearBtn = document.getElementById('clear-video-prompt');
         if (clearBtn) {
