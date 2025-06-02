@@ -39,6 +39,7 @@
                         <option value="surreal">Surreal</option>
                         <option value="minimalist">Minimalist</option>
                         <option value="retro-futurism">Retro Futurism</option>
+                        <option value="grunge">Grunge</option>
                     </select>
                 </div>
                 
@@ -80,6 +81,9 @@
                             <option value="over-the-shoulder">Over-the-shoulder</option>
                             <option value="point-of-view">Point-of-view</option>
                             <option value="tracking shot">Tracking shot</option>
+                            <option value="split">Split</option>
+                            <option value="fish-eye">Fish-Eye</option>
+                            <option value="tiny-planet">Tiny-Planet</option>
                         </select>
                     </div>
                     
@@ -136,6 +140,7 @@
                             <option value="1:1">1:1 (square)</option>
                             <option value="21:9">21:9 (ultrawide)</option>
                             <option value="9:16">9:16 (vertical)</option>
+                            <option value="9:16">9:16 (horizontal)</option>
                         </select>
                     </div>
                     
