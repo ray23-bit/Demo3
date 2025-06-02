@@ -239,3 +239,43 @@
     transform: translateY(-2px);
     box-shadow: var(--neumorph-shadow-hover);
 }
+/* New styles for special effect buttons */
+.video-prompt-generator .effect-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.video-prompt-generator .effect-button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    color: var(--text);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: var(--neumorph-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.video-prompt-generator .effect-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--neumorph-shadow-hover);
+}
+
+.video-prompt-generator .effect-button.active {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.video-prompt-generator .character-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
