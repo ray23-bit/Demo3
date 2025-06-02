@@ -1,4 +1,30 @@
  /* Video Prompt Generator Styles - Neumorphism Version */
+:root {
+  /* Color Variables */
+  --primary: #9c66d7;
+  --primary-gradient: linear-gradient(135deg, #9c66d7 0%, #6a3093 100%);
+  --text: #333;
+  --text-muted: #666;
+  --card-bg: #f0f0f3;
+  --darker: #e0e0e3;
+  --glass-border: rgba(255, 255, 255, 0.5);
+  
+  /* Neumorphism Variables */
+  --neumorph-shadow: 8px 8px 15px rgba(163, 177, 198, 0.6), 
+                    -8px -8px 15px rgba(255, 255, 255, 0.7);
+  --neumorph-shadow-hover: 12px 12px 20px rgba(163, 177, 198, 0.7), 
+                         -12px -12px 20px rgba(255, 255, 255, 0.8);
+  --neumorph-inset: inset 3px 3px 5px rgba(163, 177, 198, 0.6), 
+                   inset -3px -3px 5px rgba(255, 255, 255, 0.7);
+  
+  /* Radius */
+  --radius: 15px;
+  --radius-sm: 10px;
+  
+  /* Notification Colors */
+  --success: #4CAF50;
+  --error: #F44336;
+}
 .video-prompt-generator {
     background: var(--card-bg);
     padding: 1.75rem;
