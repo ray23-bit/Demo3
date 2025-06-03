@@ -298,7 +298,13 @@
         <div class="chat-input">
           <input type="text" id="audio-prompt" placeholder="Masukkan teks untuk diubah jadi audio..." class="neumorph-input">
           <button id="generate-audio-button" class="neumorph-btn"><i class="fas fa-magic"></i> Generate Audio</button>
-         </div>
+  
+        <div class="backsound-controls">
+          <input type="file" id="backsound-upload" accept="audio/*" style="display: none;">
+          <button id="select-backsound" class="neumorph-btn">Pilih Backsound</button>
+          <button id="remove-backsound" class="neumorph-btn">Tanpa Backsound</button>
+          <span id="backsound-info">Tidak ada backsound</span>
+        </div>
         </div>
       </div>
       <section class="video-prompt-generator" id="videoPromptGenerator"></section>
