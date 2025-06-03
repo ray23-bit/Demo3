@@ -148,3 +148,16 @@
   opacity: 0.8;
   margin-left: 10px;
 }
+
+.backsound-options {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#backsound-status {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  opacity: 0.7;
+}
