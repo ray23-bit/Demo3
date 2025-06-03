@@ -332,5 +332,43 @@
     }
   });
   </script>
+<script>
+  const backgroundMusic = document.getElementById('background-music');
+  const backsoundOn = document.getElementById('backsound-on');
+  const backsoundOff = document.getElementById('backsound-off');
+  const userBacksoundInput = document.getElementById('user-backsound');
+  let userSelectedMusic = null;
+
+  userBacksoundInput?.addEventListener('change', () => {
+    const file = userBacksoundInput.files[0];
+    if (file) {
+      userSelectedMusic = URL.createObjectURL(file);
+    }
+  });
+
+  window.playBackgroundMusicBasedOnText = function(text) {
+    const lower = text.toLowerCase();
+    let musicUrl = '';
+
+    if (userSelectedMusic) {
+      musicUrl = userSelectedMusic;
+    } else if (/sedih|sunyi|rindu|sendu/.test(lower)) {
+      musicUrl = 'https://cdn.pixabay.com/download/audio/2023/03/02/audio_a23e4ff5b6.mp3';
+    } else if (/ceria|bahagia|senang|semangat/.test(lower)) {
+      musicUrl = 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_5b2d40c0c1.mp3';
+    } else if (/misteri|tegang|seram/.test(lower)) {
+      musicUrl = 'https://cdn.pixabay.com/download/audio/2022/10/16/audio_26c4fc6f89.mp3';
+    } else {
+      musicUrl = 'https://cdn.pixabay.com/download/audio/2022/02/23/audio_578e9e524b.mp3';
+    }
+
+    if (backsoundOn?.checked) {
+      backgroundMusic.src = musicUrl;
+      backgroundMusic.volume = 0.3;
+      backgroundMusic.currentTime = 0;
+      backgroundMusic.play().catch(() => {});
+    }
+  };
+</script>
 </body>
 </html>
