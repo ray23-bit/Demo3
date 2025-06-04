@@ -1,13 +1,21 @@
-
 :root {
-  --panel-bg: #e0e0e0;
-  --shadow-dark: #bebebe;
-  --shadow-light: #ffffff;
-  --text-color: #333333;
-  --primary-color: #76b2fe;
-  --secondary-color: #b69efe;
-  --success-color: #4CAF50;
-}
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --dark-color: #2d3436;
+            --light-color: #f5f6fa;
+            --success-color: #00b894;
+            --warning-color: #fdcb6e;
+            --danger-color: #d63031;
+            --bg-color: #e0e5ec;
+            --text-color: #2d3436;
+            --panel-bg: #e0e5ec;
+            --shadow-light: #ffffff;
+            --shadow-dark: #a3b1c6;
+            --blur-amount: 10px;
+            --border-radius: 20px;
+            --neumorph-light: #ffffff;
+            --neumorph-dark: #a3b1c6;
+        }
 
 
 .chatbot-panel {
