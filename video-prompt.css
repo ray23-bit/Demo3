@@ -195,3 +195,122 @@
     transform: translateY(-2px);
     box-shadow: var(--neumorph-shadow-hover);
 }
+
+/* Tambahkan ini ke file CSS Anda */
+
+/* Language buttons styling */
+.language-options {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--neumorph-inset);
+}
+
+.language-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: var(--neumorph-shadow);
+    font-size: 0.8rem;
+}
+
+.language-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--neumorph-shadow-hover);
+}
+
+.language-button.active {
+    background: var(--primary-gradient);
+    color: white;
+    box-shadow: var(--neumorph-inset);
+}
+
+/* Reset button styling */
+.reset-button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--card-bg);
+    color: var(--text-muted);
+    box-shadow: var(--neumorph-shadow);
+}
+
+.reset-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--neumorph-shadow-hover);
+    color: var(--text);
+}
+
+/* Character dialogue groups styling */
+.character-dialogue {
+    background: var(--darker);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    margin-top: 0.5rem;
+    box-shadow: var(--neumorph-inset);
+}
+
+.character-dialogue label {
+    color: var(--text);
+}
+
+.character-dialogue input[type="text"] {
+    margin-bottom: 0.5rem;
+}
+
+/* Notification styling */
+#notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-sm);
+    color: white;
+    font-weight: 500;
+    box-shadow: var(--neumorph-shadow);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: none;
+}
+
+#notification.show {
+    opacity: 1;
+    display: block;
+}
+
+/* Responsive adjustments for character dialogues */
+@media (max-width: 768px) {
+    .character-dialogue {
+        padding: 0.75rem;
+    }
+    
+    .language-options {
+        padding: 0.75rem;
+    }
+}
+
+/* Additional styling for better visual hierarchy */
+.video-prompt-generator small {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.video-prompt-generator .output-group textarea {
+    background: var(--darker);
+    box-shadow: var(--neumorph-inset);
+}
+
+/* Icon spacing */
+.video-prompt-generator button i {
+    margin-right: 0.5rem;
+}
