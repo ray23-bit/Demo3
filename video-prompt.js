@@ -863,8 +863,27 @@
     }
 
     async translateText(text, targetLang = 'en') {
-        // Simple translation mapping for demonstration
-        // In a real implementation, you would use Google Translate API
+    try {
+        const response = await fetch('https://libretranslate.de/translate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                q: text,
+                source: 'auto',
+                target: targetLang,
+                format: 'text'
+            })
+        });
+
+        const result = await response.json();
+        return result.translatedText || text;
+    } catch (error) {
+        console.error('Translation error:', error);
+        return text;
+    }
+ }
         const translations = {
             'id': {
                 'pemandangan kota cyberpunk': 'cyberpunk cityscape',
