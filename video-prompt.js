@@ -1084,12 +1084,12 @@
                 const charDesc = getValue(`video-character${i}-desc`);
                 const charDialog = getValue(`video-character${i}-dialog`);
                 
-                if (charDesc) {
-                    const translatedDesc = await this.translateText(charDesc);
-                    prompt += `Character ${i}: ${translatedDesc || charDesc}. `;
-                }
-                if (charDialog) {
-                    prompt += `Character ${i} dialogue: "${charDialog}". `;
+             if (charDesc) {
+                 const translatedDesc = await this.translateText(charDesc);
+                 prompt += `Character ${i}: ${translatedDesc}. `;
+                 }
+             if (charDialog) {
+                 prompt += `Character ${i} dialogue: "${charDialog}". `;
                 }
             }
         }
