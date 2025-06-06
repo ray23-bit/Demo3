@@ -1084,18 +1084,18 @@
             prompt += `Number of characters: ${charCount}. `;
             
             for (let i = 1; i <= charCount; i++) {
-                const charDesc = getValue(`video-character${i}-desc`);
-                const charDialog = getValue(`video-character${i}-dialog`);
-                
-                if (charDesc) {
-                    const translatedDesc = await this.translateText(charDesc);
-                    prompt += `Character ${i}: ${translatedDesc || charDesc}. `;
-                }
-                if (charDialog) {
-                    prompt += `Character ${i} dialogue: "${charDialog}". `;
-                }
-            }
-        }
+    const charDesc = getValue(`video-character${i}-desc`);
+    const charDialog = getValue(`video-character${i}-dialog`);
+    
+    if (charDesc) {
+        const translatedDesc = await this.translateText(charDesc);
+        prompt += `Character ${i}: ${translatedDesc || charDesc}. `;
+    }
+    if (charDialog) {
+        const translatedDialog = await this.translateText(charDialog);
+        prompt += `Character ${i} dialogue: "${translatedDialog || charDialog}". `;
+    }
+}
         
         if (translatedDetails || details) prompt += `Additional details: ${translatedDetails || details}. `;
         if (translatedSound || sound) prompt += `Sound effects and music: ${translatedSound || sound}. `;
