@@ -863,44 +863,24 @@
     }
 
     async translateText(text, targetLang = 'en') {
-        // Simple translation mapping for demonstration
-        // In a real implementation, you would use Google Translate API
-        const translations = {
-            'id': {
-                'pemandangan kota cyberpunk': 'cyberpunk cityscape',
-                'berkilau dengan lampu neon': 'shimmering with neon lights',
-                'biru neon, ungu, dan merah muda': 'neon blue, purple, and pink',
-                'Blade Runner, Akira': 'Blade Runner, Akira',
-                'Hujan turun, pantulan di permukaan basah, iklan holografik': 'Rain falling, reflections on wet surfaces, holographic advertisements',
-                'Musik synthwave dengan bass yang dalam dan efek suara futuristik': 'Synthwave music with deep bass and futuristic sound effects',
-                'kota cyberpunk': 'cyberpunk city',
-                'robot futuristik': 'futuristic robot',
-                'terbang': 'flying',
-                'menari': 'dancing',
-                'bertransformasi': 'transforming',
-                'biru dan merah muda pastel': 'pastel blue and pink',
-                'monokrom': 'monochrome',
-                'Studio Ghibli': 'Studio Ghibli',
-                'Wes Anderson': 'Wes Anderson',
-                'Pria paruh baya dengan janggut abu-abu': 'Middle-aged man with gray beard',
-                'Wanita muda dengan rambut biru': 'Young woman with blue hair',
-                'Anak kecil dengan mainan robot': 'Little child with robot toy',
-                'Robot humanoid dengan suara mekanis': 'Humanoid robot with mechanical voice'
-            }
-        };
-
-        if (targetLang === 'en' && this.currentLanguage === 'id') {
-            // Check if we have a direct translation
-            for (const [id, en] of Object.entries(translations['id'])) {
-                if (text.includes(id)) {
-                    return text.replace(id, en);
-                }
-            }
-        }
-        
-        // If no translation found, return the original text (in a real app, you'd use an API here)
+    try {
+        const response = await fetch('https://libretranslate.de/translate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                q: text,
+                source: 'auto',
+                target: targetLang,
+                format: 'text'
+            })
+        });
+        const result = await response.json();
+        return result.translatedText || text;
+    } catch (err) {
+        console.error('Translation error:', err);
         return text;
     }
+}
 
     async generatePrompt() {
         const getValue = (id) => document.getElementById(id)?.value.trim() || '';
